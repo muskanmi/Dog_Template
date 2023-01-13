@@ -1,0 +1,215 @@
+*{
+    /* height: 100%; */
+    padding: 0px;
+    margin: 0px;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+}
+.email_icon_text {
+    color: #675444;
+    margin-left: 30px;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    align-items: center;
+    gap: 9px;
+}
+.email_icon_text .fa-envelope {
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.location_icon_text {
+    color: #675444;
+    /* margin-left: 30px; */
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    align-items: center;
+    gap: 9px;
+}
+.call_icon_text {
+    color: #675444;
+    margin-left: 30px;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    align-items: center;
+    gap: 9px;
+}
+.location_icon_text .fa-location-pin {
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.call_icon_text .fa-phone-flip {
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.location_text, .email_text, .call_text {
+    margin: 0;
+}
+.social_icons {
+    color: #675444;
+}
+.social_icons .fa-facebook-f {
+    width: 34px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 18px;
+}
+.social_icons .fa-twitter {
+    width: 34px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 18px;
+}
+.social_icons .fa-instagram {
+    width: 34px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 18px;
+}
+.main_header {
+    background-color: #F9BE4F;
+    height: 106px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flaticon_dog::before {
+    content: "\f004";
+}
+.logo_text {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+}
+.main_navbar {
+    display: flex;
+    /* margin: auto; */
+    color: #fff;
+    list-style: none;
+    /* height: 100%; */
+    margin-bottom: 0px !important;
+}
+.main_navbarItem {
+    /* margin: auto; */
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.active {
+    background-color: #F9575C;
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+}
+.main_navbarItem:hover {
+    background-color: #F9575C;
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+    transition: all .2s ease-in-out;
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}	
+.navbar-nav {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    padding-left: 2rem;
+}
+.nav-link {
+    color: #fff !important;
+    padding: 20px !important;
+}
+.nav-link:hover {
+    background-color: #F9575C;
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+    transition: all .2s ease-in-out;
+}
+.dropdown-menu {
+    background-color: #F9BE4F !important;
+}
+.dropdown-item {
+    font-weight: 700;
+    color: #fff !important;
+    transition: all .2s ease-in-out;
+    padding-top: 20px;
+}
+.dropdown-item:hover{
+    background-color: #675444 !important;
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
+}
+.fa-paw {
+    position: absolute;
+    bottom: 45px;
+    z-index: 9;
+    font-size: 20px;
+    color: #F9BE4F;
+}
+.fa-heart {
+    position: relative;
+    font-size: 44px;
+    color: #F9575C;
+    z-index: 1;
+    left: -10px;
+}
+
+@media screen and (max-width: 580px) {
+    .upper_header {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0px;
+    }
+    .call_icon_text, .email_icon_text, .location_icon_text {
+        margin-left: 15px;
+    }
+    .call_text, .email_text, .location_text {
+        font-size: 12px;
+    }
+    .social_icons .fa-facebook-f, .fa-instagram, .fa-twitter {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 100%;
+        padding: 0px;
+    }
+    ul.navbar-nav {
+        background-color: #F9BE4F;
+        /* margin-top: 58px; */
+    }
+    .dropdown-menu{
+        border: none;
+    }
+    .hamburger_menu_styling {
+        display: flex;
+        flex-flow: column;
+        justify-content: end;
+        align-items: flex-end;
+    }
+    #main_nav {
+        position: absolute;
+        top: 100%;
+    }
+    .navbar-toggler {
+        position: relative;
+        margin-right: 20px;
+    }
+    .container_padding_responsive {
+        padding-left: 20px;
+    }
+}

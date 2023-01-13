@@ -5,10 +5,151 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        .ul_tag {
+            list-style: none;
+            display: flex;
+            /* padding: 20px; */
+        }
+        .ul_tag li {
+            padding: 20px;
+        }
+        .hamburger {
+            display: none;
+        }
+        @media screen and (max-width: 800px) {
+            .ul_tag{
+                display: block;
+            }
+            .hamburger {
+                display: block;
+            }
+            .logo_hamburger {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+           
+            .menu_links {
+                position: absolute;
+                left: -100%;
+                top: 49px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                transition: .5s;
+            }
+            .menu_links.show {
+                left: 0;
+                transition: .5s;
+            }
+        }
+        .ul_inner{
+            display: none;
+            list-style: none;
+        }
+        .ul_inner_last{
+            display: none;
+            list-style: none;
+        }
+        .ul_tag .li_tag:hover .ul_inner {
+            display: block;
+            background-color: black;
+            color: #fff;
+            margin-top: 10px;
+            position: absolute;
+        }
+        .ul_tag .li_tag:hover .ul_inner_last {
+            display: block;
+            background-color: black;
+            color: #fff;
+        }
+        .ul_tag .li_tag:hover .ul_inner a {
+            display: flex;
+            padding: 15px;
+        }
+        .ul_tag .li_tag:hover .ul_inner_last a {
+            display: flex;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        
+    <nav class="navbar">
+        <div class="logo_hamburger">
+            <h1>LOGO</h1>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="menu_links">
+            <ul class="ul_tag">
+                <li class="li_tag">Home</li>
+                <li class="li_tag">Services
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <span class="ul_inner">
+                        <a class="li_inner">Services Style 1</a>
+                        <a class="li_inner">Services Style 2</a>
+                        <a class="li_inner">Services Single</a>
+                        </span>
+                </li>
+                <li class="li_tag">About
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <span class="ul_inner">
+                        <a class="li_inner">About Style 1</a>
+                        <a class="li_inner">About Style 2</a>
+                    </span>
+                </li>
+                <li class="li_tag">Adopt
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <spam class="ul_inner">
+                        <a class="li_inner">Adoption Gallery</a>
+                        <a class="li_inner">Adoption Single Page</a>
+                        </span>
+                </li>
+                <li class="li_tag">Gallery
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <span class="ul_inner">
+                        <a class="li_inner">Gallery Style 1</a>
+                        <a class="li_inner">Gallery Style 2</a>
+                    </span>
+                </li>
+                <li class="li_tag">Contact
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <span class="ul_inner">
+                        <a class="li_inner">Contact Style 1</a>
+                        <a class="li_inner">Contact Style 2</a>
+                    </span>
+                </li>
+                <li class="li_tag">Other pages
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    <span class="ul_inner_last">
+                        <a class="li_inner">Our Team</a>
+                        <a class="li_inner">Blog Home</a>
+                        <a class="li_inner">Blog Single</a>
+                        <a class="li_inner">Elemenets Page</a>
+                        <a class="li_inner">404 Page</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
     </nav>
+
+
+    <script>
+        let hamburger = document.getElementsByClassName("hamburger")[0];
+        let ul = document.getElementsByClassName("menu_links")[0];
+        hamburger.addEventListener("click", function() {
+            ul.classList.toggle("show");
+            // console.log("hello");
+        });
+    </script>
+
 </body>
 </html>
